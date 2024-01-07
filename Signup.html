@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body
+        {
+            background-image: url(sample3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 14%;
+            padding-left: 35%;
+        }
+        input
+        {
+            height:30px;
+            width:200px;
+        }
+        .detailsBox
+        {   
+            display: flex;
+            border: 5px solid #6fdaed;
+            /* border-radius: 15px; */
+	        position:relative;
+	        background-color:black;
+	        padding:25px;
+            align-items: center;
+            flex-direction: column;
+            width: 35%;
+            /* border-top:  5px solid rgb(255, 0, 0);
+            border-left: 5px solid rgb(0, 0, 255);
+            border-bottom: 5px solid rgb(0, 255, 0);
+            border-right: 5px solid rgb(249, 249, 122); */
+        }
+        .glow::before , .glow::after
+        {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            background: linear-gradient(45deg , yellow, orange,lightgreen ,blue,cyan  ,pink);
+            background-size: 400%;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            z-index:-1;
+            animation: animate 20s linear infinite;
+        }
+        @keyframes animate
+        {
+            0%
+            {
+                background-position: 0 0;
+            }
+            50%
+            {
+                background-position: 400% 0;
+            }
+            100%
+            {
+                background-position: 0 0;
+            }
+        }
+        .glow::after
+        {
+            filter:blur(10px);
+        }
+        .signup
+        {
+            color: #8f4c8f;
+        }
+        .register
+        {
+            text-decoration: none;
+            text-align: center;
+            width: 58%;
+            height: 25px;
+            background-color: #530d53;
+            border: 1px solid white;
+            border-color: #530d53;
+            border-radius: 5px;
+            color: white;
+        }
+        .register:hover
+        {
+            background-color: #6fdaed;
+            color: #530d53;
+        }
+        #email,#password,#confirmpassword
+        {
+            background-color: #312031;
+            border: 1px solid #312031;
+            border-color: #312031;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="detailsBox glow"> 
+        <h2 class="signup" style="color:thistle">SIGNUP</h3><br>
+        <input type="email" name="email" id="email" placeholder="Email" required><br>
+        <input type="password" name="password" id="password" placeholder="Password" required><br>
+        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required><br>
+        <a class="register" href="Loginpage.html" style="padding:8px;">Register</a><br>
+    </div>
+</body>
+</html>
